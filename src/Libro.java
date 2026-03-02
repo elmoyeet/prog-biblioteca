@@ -6,6 +6,8 @@ public class Libro {
     private String autor;
     private int numPaginas;
 
+
+
     public Libro(int id, String titulo, String autor, int numPaginas) { // parametros del metodo
         int numHojas; // variable del metodo
 
@@ -35,6 +37,15 @@ public class Libro {
 
     @Override
     public String toString() {
-        return super.toString();
+        StringBuilder sb = new StringBuilder("Libro: {");
+
+        sb.append(String.format("\n id: %d", id));
+        sb.append(String.format(" titulo: %s", titulo));
+        sb.append(String.format(" autor: %s", autor));
+        sb.append(String.format(" num. páginas: %d", numPaginas));
+
+        sb.append("}");
+
+        return sb.toString();
     }
 }
