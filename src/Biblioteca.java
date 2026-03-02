@@ -21,4 +21,17 @@ public class Biblioteca {
 
         return libroEncontrado;
     }
+
+    private int buscarPrimerHuecoLibre() {
+        int posicionLibre = -1;
+        boolean seguirBuscando = true;
+
+        for (int i = 0; i < CANT_MAX_LIBROS && seguirBuscando; i++) {
+            if ( catalogo[i] == null) {
+                posicionLibre = i;
+                seguirBuscando = false;
+            }
+        }
+        return posicionLibre;
+    }
 }
